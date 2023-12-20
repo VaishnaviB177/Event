@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .shoe {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .shoe-item {
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Shoe Store</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">Kids</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Men's Shoes</h2>
+        <div class="shoe">
+            <div class="shoe-item">
+                <img src="shoe1.jpg" alt="Shoe 1">
+                <p>Shoe 1</p>
+                <p>$50</p>
+                <button>Buy</button>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Add more shoe items as needed -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Women's Shoes</h2>
+        <div class="shoe">
+            <div class="shoe-item">
+                <img src="shoe2.jpg" alt="Shoe 2">
+                <p>Shoe 2</p>
+                <p>$60</p>
+                <button>Buy</button>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Add more shoe items as needed -->
+        </div>
+    </section>
+
+    <!-- Add more sections for Kids, etc. -->
+
+    <footer>
+        <select>
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="ca">Canada</option>
+        </select>
+
+        <select>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+        </select>
+
+        <select>
+            <option value="ny">New York</option>
+            <option value="la">Los Angeles</option>
+            <option value="sf">San Francisco</option>
+        </select>
+    </footer>
+    
+</body>
+
+</html>
