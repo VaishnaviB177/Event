@@ -1,131 +1,872 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoe Store</title>
-    <style>
-        body {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StepUp</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212; /* Dark background color */
+      color: #ffffff; /* Light text color */
+    }
+
+    header {
+      background-color: #1a1a1a; /* Dark header background color */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #ffffff; /* Light text color for the logo */
+      text-decoration: none;
+
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #ffffff; /* Light text color for the navigation links */
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc00; /* Highlight color on hover */
+    }
+
+    #cta-button {
+      background-color: #ffcc00; /* Button background color */
+      color: #121212; /* Button text color */
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    #cta-button:hover {
+      background-color: #ffffff; /* Button background color on hover */
+      color: #121212; /* Button text color on hover */
+    }
+    .hero {
+    position: relative;
+    height: 100vh;
+    background: url('hero-background.jpg') center/cover no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: #ff3366; /* Custom color for the CTA button */
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #e6005c; /* Darker shade for hover effect */
+}
+body {
+            background-color: #333;
+            color: #fff;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
-        header {
-            background-color: #333;
-            color: #fff;
+        .featured-section {
+            padding: 50px 20px;
             text-align: center;
-            padding: 10px;
         }
 
-        nav {
-            background-color: #444;
-            overflow: hidden;
-        }
-
-        nav a {
-            float: left;
-            display: block;
-            color: #fff;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        section {
-            padding: 20px;
-        }
-
-        .shoe {
+        .shoe-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .shoe-item {
-            width: 200px;
+        .shoe-card {
+            background-color: #444;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .shoe-card:hover {
+            transform: scale(1.05);
+        }
+
+        .shoe-image {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 2px solid #666;
+        }
+
+        .shoe-info {
+            padding: 15px;
+        }
+
+        .shoe-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .shoe-description {
+            font-size: 0.9em;
+            color: #ccc;
+        }
+        body {
+    background-color: #222;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.how-it-works-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.step {
+    display: flex;
+    margin-top: 20px;
+}
+
+.step-number {
+    background-color: #555;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.step-content {
+    flex: 1;
+}
+
+h3 {
+    color: #fff;
+}
+
+p {
+    color: #ccc;
+}
+body {
+            background-color: #121212;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .benefits-section {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .benefits-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit {
+            flex: 1;
             margin: 10px;
-            padding: 10px;
-            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+        }
+
+        .benefit img {
+            max-width: 100%;
+            margin-bottom: s0px;
+        }
+
+        .benefit h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .benefit p {
+            font-size: 1em;
+        }
+    body {
+      background-color: #1a1a1a;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .testimonials {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .testimonial {
+      display: inline-block;
+      max-width: 300px;
+      margin: 0 20px;
+    }
+
+    .testimonial img {
+      border-radius: 50%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .testimonial p {
+      font-style: italic;
+      margin-top: 10px;
+    }
+
+    .testimonial .name {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    body {
+            background-color: #1e1e1e;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .about-section {
+            padding: 80px 0;
             text-align: center;
         }
 
-        footer {
+        .about-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .about-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .team-member {
+            margin: 0 20px;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .team-member h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .team-member p {
+            font-size: 1em;
+            line-height: 1.4;
+        }
+        body {
             background-color: #333;
             color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
         }
-    </style>
-</head>
 
-<body>
-    <header>
-        <h1>Shoe Store</h1>
-    </header>
+        .contact-section {
+            padding: 50px;
+            text-align: center;
+        }
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Men</a>
-        <a href="#">Women</a>
-        <a href="#">Kids</a>
-        <a href="#">Contact</a>
-    </nav>
+        .contact-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
 
-    <section>
-        <h2>Men's Shoes</h2>
-        <div class="shoe">
-            <div class="shoe-item">
-                <img src="shoe1.jpg" alt="Shoe 1">
-                <p>Shoe 1</p>
-                <p>$50</p>
-                <button>Buy</button>
-                <button>Add to Cart</button>
-            </div>
-            <!-- Add more shoe items as needed -->
-        </div>
-    </section>
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-    <section>
-        <h2>Women's Shoes</h2>
-        <div class="shoe">
-            <div class="shoe-item">
-                <img src="shoe2.jpg" alt="Shoe 2">
-                <p>Shoe 2</p>
-                <p>$60</p>
-                <button>Buy</button>
-                <button>Add to Cart</button>
-            </div>
-            <!-- Add more shoe items as needed -->
-        </div>
-    </section>
+        label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
 
-    <!-- Add more sections for Kids, etc. -->
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #666;
+            border-radius: 5px;
+            background-color: #444;
+            color: #fff;
+        }
 
-    <footer>
-        <select>
-            <option value="us">United States</option>
-            <option value="uk">United Kingdom</option>
-            <option value="ca">Canada</option>
-        </select>
+        input[type="submit"] {
+            background-color: #f00;
+            color: #fff;
+            cursor: pointer;
+        }
 
-        <select>
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="fr">Français</option>
-        </select>
+        input[type="submit"]:hover {
+            background-color: #d00;
+        }
 
-        <select>
-            <option value="ny">New York</option>
-            <option value="la">Los Angeles</option>
-            <option value="sf">San Francisco</option>
-        </select>
-    </footer>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #1a1a1a;
+      color: #ffffff;
+    }
+
+    footer {
+      background-color: #121212;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-size: 14px;
+    }
+
+    .footer-link {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+
+    .footer-social {
+      margin-top: 10px;
+    }
+
+    .social-icon {
+      display: inline-block;
+      margin: 0 10px;
+      font-size: 20px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .social-icon:hover {
+      color: #ffcc00; /* Change color on hover */
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a; /* Dark background color */
+      color: #ffffff; /* Text color */
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 50px;
+    }
+
+    .cta-heading {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .cta-subheading {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 18px;
+      text-decoration: none;
+      background-color: #4CAF50; /* Green button color */
+      color: #ffffff;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #45a049; /* Darker green on hover */
+    }
+     nav {
+      position: relative;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #1a1a1a;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    nav:hover .dropdown {
+      display: block;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown a:hover {
+      background-color: #333;
+    }
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212; /* Dark background color */
+      color: #ffffff; /* Light text color */
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #1a1a1a; /* Dark header background color */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000; 
+    }
+
     
-</body>
+    body.fixed-header {
+      margin-top: 70px; 
+    }
+   
 
+nav {
+  display: flex;
+  gap: 20px;
+  right: 170px;
+  position: relative; 
+  margin-right: 500px;
+}
+
+.search-input::placeholder {
+  color: #ffffff; 
+}
+
+.search-container {
+  position: absolute;
+  top: 50%;
+  right: 200px; 
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  margin-right: 200px;
+}
+
+.search-input {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: #ffffff; 
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  color: #ffffff; 
+
+}
+
+.search-input::placeholder {
+  color: #ffffff; 
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1a1a1a; 
+  padding: 20px 20px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; 
+}
+
+body.fixed-header {
+  margin-top: 70px; 
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 25px 20px; /* Adjust the top and bottom padding to increase header height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-dropdown {
+      position: relative;
+    }
+
+    .login-dropdown-btn {
+      background-color: #ffcc00;
+      color: #121212;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+    }
+
+    .login-dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #1a1a1a;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    .login-dropdown-content a {
+      display: block;
+      padding: 10px;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-dropdown-content a:hover {
+      background-color: #333;
+    }
+
+    .login-dropdown:hover .login-dropdown-content {
+      display: block;
+    }
+    .login-dropdown-btn {
+  background-color: #ffcc00;
+  color: #121212;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 200px; /* Adjust the margin as needed */
+}
+.header-icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-icon {
+      margin-left: 20px;
+      font-size: 1.5em;
+      color: #fff;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .header-icon:hover {
+      color: #ffcc00;
+    }
+
+
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+<header>
+    
+  <a id="logo" href="#">STEP-UP</a>
+  <nav>
+    <a href="Mens.html">Men's</a>
+    <a href="Women.html">Women's</a>
+    <a href="Kidfootware.html">Kids</a>
+    
+  </nav>
+  <div class="search-container">
+    <input type="text" class="search-input" placeholder="Search...">
+    <button class="search-button">&#128269;</button>
+  </div>
+
+  <!-- <button id="cta-button">Get Started</button> -->
+  <div class="login-dropdown">
+    <button class="login-dropdown-btn">Login / Register</button>
+    <div class="login-dropdown-content">
+      <a href="login.html">Login</a>
+      <a href="Register.html">Register</a>
+    </div>
+  </div>
+</header>
+<div class="homemar">
+<!-- <marquee behavior="" direction="" scrolldelay="5s"scrollamount="30"> -->
+ <video width="1500px" height="600px" autoplay loop preload="auto" muted>
+  <source src="https://media.istockphoto.com/id/967085970/video/fit-woman-seated-on-the-floor-of-a-gym-tying-shoelaces-sneakers.mp4?s=mp4-640x640-is&k=20&c=hDwal5DmJKgb98rN1TCvWTTS2eH3a93FIQ1FCIFPwLA=" type="video/mp4">
+ </video>
+<!-- </marquee> -->
+</div>
+<section class="featured-section">
+    <h2>FEATURED-SHOES</h2>
+    <div class="shoe-container">
+        <!-- Featured Shoe 1 -->
+        <div class="shoe-card">
+            <img src="https://i.pinimg.com/736x/56/0f/14/560f141a7295854e73d8a27c1ac66180.jpg" alt="Shoe 1" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-title">Stylish Sneakers</div>
+                <div class="shoe-description">Comfortable and trendy sneakers for any occasion.</div>
+            </div>
+        </div>
+
+        <!-- Featured Shoe 2 -->
+        <div class="shoe-card">
+            <img src="https://i.pinimg.com/564x/d8/a1/8c/d8a18c8b175cea0ebdb34fcb0e04cddc.jpg" alt="Shoe 2" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-title">Elegant High Heels</div>
+                <div class="shoe-description">Classy high heels that add a touch of sophistication to your style.</div>
+            </div>
+        </div>
+
+        <!-- Add more featured shoes as needed -->
+
+    </div>
+</section>
+<!-- The rest of your webpage content goes here -->
+<div class="how-it-works-section">
+
+  <img src="https://m.media-amazon.com/images/G/31/img2021/Sportswear_21/Jan22/ART/Stealdeals/Men/Asian-footwear-2._CB648915866_.gif" type="video/mp4" height="500px" width="1200px">    
+  
+</div>
+
+<a href="Mens.html"><div class="benefits-section">
+    <h2>-- OUR COLLECTION --</h2> 
+    <div class="benefits-container">
+        <div class="benefit">
+            <marquee behavior="" direction="">
+            <img style ="height: 80%;" src="https://mirzacdns3.s3.ap-south-1.amazonaws.com/cache/catalog/RSL0187/8-445x618.jpg" >
+            <img style ="height: 80%;" src="https://mirzacdns3.s3.ap-south-1.amazonaws.com/cache/catalog/RSO2055A/8-445x618.jpg">
+            <img style ="height: 80%;"src="https://mirzacdns3.s3.ap-south-1.amazonaws.com/cache/catalog/RSO2524/8-445x618.jpg" >
+            <img style="height: 80%" src="https://mirzacdns3.s3.ap-south-1.amazonaws.com/cache/catalog/RSL0453/8-445x618.jpg">
+            <img style="height: 80%" src="https://mirzacdns3.s3.ap-south-1.amazonaws.com/cache/catalog/RSL0453/8-445x618.jpg">
+            <img style="height: 80%" src="https://mirzacdns3.s3.ap-south-1.amazonaws.com/cache/catalog/RSL0185/8-445x618.jpg">
+            <img style="height: 80%" src="https://mirzacdns3.s3.ap-south-1.amazonaws.com/cache/catalog/RSL0453/8-445x618.jpg">
+            </marquee>
+            <h3>Mens</h3>
+            <p>Explore the latest trends and keep your look fresh.</p>
+        </div></a>
+
+       <a href="Women.html"> <div class="benefit">
+             <marquee behavior="" direction="">
+            <img style ="height: 470px;" src="https://assets.ajio.com/medias/sys_master/root/20230830/RFrO/64ef4248afa4cf41f59843ff/-473Wx593H-466514998-black-MODEL2.jpg" >
+            <img style ="height: 470px;" src="https://assets.ajio.com/medias/sys_master/root/20230629/zOrE/649d05d5eebac147fc38e0a6/-473Wx593H-465791732-black-MODEL.jpg">
+            <img style ="height: 470px;"src="https://assets.ajio.com/medias/sys_master/root/20220315/2jAo/622faf5eaeb26921afd8bec9/-473Wx593H-469130026-rosegold-MODEL.jpg" >
+            <img style="height: 470px;" src="https://assets.ajio.com/medias/sys_master/root/20231130/DW6T/65681150ddf7791519a635b5/-473Wx593H-450161108-beige-MODEL.jpg">
+            <img style="height: 470px;" src="https://assets.ajio.com/medias/sys_master/root/20231003/8nhx/651c1d8cafa4cf41f51d5f6b/-473Wx593H-466660631-black-MODEL.jpg">
+            <img style="height: 470px;" src="https://assets.ajio.com/medias/sys_master/root/20231003/8nhx/651c1d8cafa4cf41f51d5f6b/-473Wx593H-466660631-black-MODEL.jpg">
+            <img style="height: 470px;" src="https://assets.ajio.com/medias/sys_master/root/20231130/LDRH/65681150ddf7791519a635b7/-473Wx593H-450161143-black-MODEL.jpg">
+            </marquee>
+            <h3>Womens</h3>
+            <p>Find the collection to comfort your feets and make your look classy.</p>
+        </div></a>
+
+    <a href="Kidfootware.html"> <div class="benefit">
+            <marquee behavior="" direction="">
+            <img style ="height: 470px;" src="https://media.istockphoto.com/id/522628236/photo/little-girl-sneakers-shoes.jpg?s=612x612&w=0&k=20&c=JT7FEcRZNzOaAwDoFldcp5iymPU8hJ8Yt-WFvKZpcvw=" >
+            <img style ="height: 470px;" src="https://i.ebayimg.com/images/g/nRoAAOSw-W5Uwu05/s-l1200.jpg">
+            <img style ="height: 470px;"src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpbGRyZW4lMjBzaG9lc3xlbnwwfHwwfHx8MA%3D%3D" >
+            <img style="height: 470px;" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/cba9b128-78aa-40bb-a5a8-a340535f899c/flex-plus-2-younger-shoes-JrXgvn.png">
+            <img style="height: 470px;" src="https://static.nike.com/a/images/c_limit,w_400,f_auto/t_product_v1/576627ba-a24e-4649-af3a-c9414d375232/image.jpg">
+            <img style="height: 470px;" src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpbGRyZW4lMjBzaG9lc3xlbnwwfHwwfHx8MA%3D%3D">
+           
+            </marquee>
+            <h3>Kids</h3>
+            <p>Shoes for your child should be made of breathable materials, such as leather, canvas, or the newer mesh materials. </p>
+        </div>
+    </div>
+</div></a>
+<div class="testimonials">
+    <div class="testimonial">
+      <img src="https://media.istockphoto.com/id/1300972573/photo/pleasant-young-indian-woman-freelancer-consult-client-via-video-call.jpg?b=1&s=612x612&w=0&k=20&c=gApYcn6GubvJA-YoMO00KZAShv66MHEwrsAbcmaq_cQ=" alt="Customer 1">
+      <p>"Great service and a fantastic variety of shoes to choose from. I love the flexibility of the lending options!"</p>
+      <div class="name">John Doe</div>
+    </div>
+
+    <div class="testimonial">
+      <img src="https://media.istockphoto.com/id/1351285381/photo/happy-young-african-american-woman-looking-at-camera.webp?b=1&s=170667a&w=0&k=20&c=N31nPlncl1RGZ2IxfQdXTCl9LFN3pD31mWYhzxeRpdY=" alt="Customer 2">
+      <p>"I'm a repeat customer because of the quality and convenience. Highly recommended for shoe enthusiasts!"</p>
+      <div class="name">Jane Smith</div>
+    </div>
+
+    <div class="testimonial">
+      <img src="https://shotkit.com/wp-content/uploads/bb-plugin/cache/cool-profile-pic-matheus-ferrero-landscape-6cbeea07ce870fc53bedd94909941a4b-zybravgx2q47.jpeg" alt="Customer 3">
+      <p>"Amazing experience! The team at Shoe Haven goes above and beyond to ensure customer satisfaction. Will be back!"</p>
+      <div class="name">Robert Johnson</div>
+    </div>
+  </div>
+  
+  <div class="about-section">
+    <h2>About Us</h2>
+    <p>Welcome to our shoe lending service! At Shoe Shop, we are passionate about providing you with the latest
+        styles and trends in footwear.</p>
+    <p>Our mission is to make fashion accessible to everyone through our convenient and stylish shoe lending
+        service.</p>
+
+    <div class="team-members">
+        <div class="team-member">
+            <img src="https://t3.ftcdn.net/jpg/04/23/59/74/360_F_423597477_AKCjGMtevfCi9XJG0M8jter97kG466y7.jpg" alt="Team Member 1">
+            <h3>John Doe</h3>
+            <p>Co-Founder</p>
+        </div>
+
+        <div class="team-member">
+           <img src="https://media.istockphoto.com/id/1317804578/photo/one-businesswoman-headshot-smiling-at-the-camera.jpg?s=612x612&w=0&k=20&c=EqR2Lffp4tkIYzpqYh8aYIPRr-gmZliRHRxcQC5yylY=">
+            <h3>Jane Smith</h3>
+            <p>Head of Design</p>
+        </div>
+
+        <div class="team-member">
+            <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" alt="Team Member 3">
+            <h3>Mike Johnson</h3>
+            <p>Customer Support</p>
+        </div>
+    </div>
+</div>
+<section class="contact-section">
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Send Message">
+            </div>
+        </form>
+    </div>
+</section>
+<footer>
+    <p class="footer-text">&copy; 2023 Your Shoe Shop. All rights reserved.</p>
+    <div class="footer-social">
+      <a href="#" class="social-icon">Facebook</a>
+      <a href="#" class="social-icon">Twitter</a>
+      <a href="#" class="social-icon">Instagram</a>
+    </div>
+  </footer>
+  <div class="cta-section">
+    <h2 class="cta-heading">Step into Style Today!</h2>
+    <p class="cta-subheading">Discover our exclusive collection of shoes. Fashion meets comfort.</p>
+    <a href="#" class="cta-button">BACK TO TOP</a>
+  </div>
+  <script>
+    // Function to toggle the dropdown menu
+    function toggleDropdown() {
+      var dropdown = document.querySelector('.dropdown');
+      dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+    }
+
+    // Smooth scroll to the hero section when clicking the "Get Started" button
+    document.getElementById('cta-button').addEventListener('click', function() {
+      document.querySelector('.hero').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+
+</body>
 </html>
